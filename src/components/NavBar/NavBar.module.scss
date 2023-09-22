@@ -26,4 +26,9 @@
 .list {
     list-style: none;
     display: flex;
+    
+    .linkActive {
+        color: $color-warning;
+    }
 }
+
