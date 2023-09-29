@@ -4,7 +4,7 @@ import strContains from "../utils/strContains";
 import listsReducer from "./listsRedux";
 import columnsReducer from "./columnsRedux";
 import cardsReducer from "./cardsRedux";
-//import filterCardsReducer from "./filterCardsRedux";
+import filterCardsReducer from "./filterCardsRedux";
 
 //selectors
 export const getFilteredCards = ({ cards, filterCards }, columnId) =>
@@ -36,15 +36,6 @@ export const toggleCardFavorite = (payload) => ({
   type: "TOGGLE_CARD_FAVORITE",
   payload,
 });
-
-const filterCardsReducer = (statePart = "", action) => {
-  switch (action.type) {
-    case "FILTER_CARDS":
-      return action.payload;
-    default:
-      return statePart;
-  }
-};
 
 const subreducers = {
   lists: listsReducer,
